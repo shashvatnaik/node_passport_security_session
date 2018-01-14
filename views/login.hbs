@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login page</title>
+</head>
+<body>
+<center>
+    {{> options}}
+    <h1>login</h1>
+    <h4>
+        <form action="/loginCheck" method="post">
+        <input type="text" name="username" placeholder="enter email"><br>
+        <input type="password" name="password" placeholder="enter password"><br>
+            <input type="submit" value="login">
+        </form>
+    </h4>
+</center>
+</body>
+<script>
+    if(`{{alert}}`){
+        alert(`{{alert}}`);
+    }
+   </script>
+</html>

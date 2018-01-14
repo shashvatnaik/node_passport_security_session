@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+<h1>home</h1>
+<h3>
+
+    <button id="btn_view"><a href="/tasks">view tasks</a></button>
+    <button id="btn_logout"><a href="/logout">logout</a></button>
+    <input type="button" id="btn_add" value="add tasks" onclick="add()">
+    <div id="gg"></div>
+    <h3>{{msg}}</h3>
+</h3>
+<script type="text/javascript">
+let add=()=>{
+
+    document.getElementById(`gg`).innerHTML=`<form method="post" action="/addTasks"><input type="text" name="Task" required><br><input type="submit" value="add task"></form>`;
+};
+console.log(window.history);
+let url = window.location.href;
+
+window.popstate = function() {
+    window.history.go(-window.history.length);
+    window.location.href = url;
+}
+</script>
+</body>
+</html>
